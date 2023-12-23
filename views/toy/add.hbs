@@ -1,0 +1,19 @@
+<form action="/toy/add" method="post">
+   <h1>Add new Toy</h1>
+   Toy name: <input type="text" name="name" id="" required>
+   <br><br>
+   Toy description: <input type="text" name="description" id="" required>
+   <br><br>
+   Toy price: <input type="text" name="price" id="" required>
+   <br><br>
+   Toy image: <input type="url" name="image" id="" required>
+   <br><br>
+   Toy brand: <br>
+   <select name="brand">
+      {{#each brands }}
+      <option value="{{ _id }}"> {{ name }}</option>
+      {{/each}}
+   </select>
+   <br><br>
+   <input type="submit" value="Add">
+</form>
